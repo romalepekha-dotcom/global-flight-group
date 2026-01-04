@@ -1,7 +1,7 @@
-'use client';
+&apos;use client&apos;;
 
-import { motion } from 'framer-motion';
-import { AIRCRAFT_TYPES } from '@/lib/content';
+import { motion } from &apos;framer-motion&apos;;
+import { AIRCRAFT_TYPES } from &apos;@/lib/content&apos;;
 
 export default function AircraftTypes() {
   return (
@@ -81,15 +81,15 @@ export default function AircraftTypes() {
           className="text-center mt-12"
         >
           <p className="text-gray-muted mb-6">
-            Don't see your aircraft type? We handle a wide range of civilian aircraft.
+            Don&apos;t see your aircraft type? We handle a wide range of civilian aircraft.
           </p>
           <button
             onClick={() => {
-              const element = document.getElementById('contact');
+              const element = document.getElementById(&apos;contact&apos;);
               if (element) {
                 const offset = 80;
                 const elementPosition = element.offsetTop - offset;
-                window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+                window.scrollTo({ top: elementPosition, behavior: &apos;smooth&apos; });
               }
             }}
             className="btn-secondary"
@@ -112,7 +112,7 @@ function AircraftCategory({ category, index }: AircraftCategoryProps) {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
+      viewport={{ once: true, margin: &apos;-50px&apos; }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -4 }}
       className="group"
@@ -151,7 +151,7 @@ function AircraftCategory({ category, index }: AircraftCategoryProps) {
 
 function CategoryIcon({ category }: { category: string }) {
   // Agricultural
-  if (category.includes('Agricultural')) {
+  if (category.includes(&apos;Agricultural&apos;)) {
     return (
       <svg className="w-6 h-6 text-accent-sky" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
         <path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
@@ -159,7 +159,7 @@ function CategoryIcon({ category }: { category: string }) {
     );
   }
   // Single-Engine
-  if (category.includes('Single')) {
+  if (category.includes(&apos;Single&apos;)) {
     return (
       <svg className="w-6 h-6 text-accent-sky" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
         <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -167,7 +167,7 @@ function CategoryIcon({ category }: { category: string }) {
     );
   }
   // Twin-Engine
-  if (category.includes('Twin')) {
+  if (category.includes(&apos;Twin&apos;)) {
     return (
       <svg className="w-6 h-6 text-accent-sky" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
         <path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M7 16h.01" />
@@ -181,4 +181,5 @@ function CategoryIcon({ category }: { category: string }) {
     </svg>
   );
 }
+
 
