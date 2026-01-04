@@ -51,7 +51,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           ok: false,
-          error: "Email service not configured (missing RESEND_API_KEY in Vercel Production env).",
+          error:
+            "Email service not configured (missing RESEND_API_KEY in Vercel Production env).",
         },
         { status: 500 }
       );
@@ -60,7 +61,6 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(resendKey);
 
     const submittedAt = new Date().toLocaleString();
-
     const subject = `New Consultation Request — ${name}`;
 
     const text = [
@@ -132,10 +132,7 @@ export async function POST(request: NextRequest) {
 
     if (result.error) {
       console.error("RESEND_SEND_ERROR", result.error);
-      return NextResponse.json(
-        { ok: false, error: "Failed to send email" },
-        { status: 502 }
-      );
+      return NextResponse.json({ ok: false, error: "Failed to send email" }, { status: 502 });
     }
 
     return NextResponse.json(
