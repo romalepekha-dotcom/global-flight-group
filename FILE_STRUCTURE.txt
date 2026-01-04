@@ -1,0 +1,92 @@
+Blue Wings Aviation - File Structure
+═══════════════════════════════════════════════════════════════
+
+planesellingbusiness/
+│
+├── 📄 package.json              # Dependencies & scripts
+├── 📄 tsconfig.json             # TypeScript config
+├── 📄 tailwind.config.ts        # Tailwind theme (colors, fonts)
+├── 📄 next.config.js            # Next.js config
+├── 📄 postcss.config.js         # PostCSS config
+├── 📄 .eslintrc.json            # Linting rules
+├── 📄 .gitignore                # Git ignore rules
+├── 📄 next-env.d.ts             # TypeScript declarations
+│
+├── 📚 Documentation Files
+│   ├── 📄 QUICKSTART.txt        # ⭐ START HERE!
+│   ├── 📄 INSTRUCTIONS.md       # Detailed setup guide
+│   ├── 📄 README.md             # Project overview
+│   ├── 📄 SETUP.md              # Environment variables
+│   ├── 📄 PROJECT_SUMMARY.md    # Complete feature list
+│   └── 📄 FILE_STRUCTURE.txt    # This file
+│
+├── 📁 app/                      # Next.js App Router
+│   ├── 📄 layout.tsx            # Root layout + metadata
+│   ├── 📄 page.tsx              # Main page (assembles sections)
+│   └── 📄 globals.css           # Global styles + Tailwind
+│
+├── 📁 components/               # React Components (10 files)
+│   ├── 📄 Nav.tsx               # Sticky navigation + scrollspy
+│   ├── 📄 Hero.tsx              # Hero + animated flight path
+│   ├── 📄 HowItWorks.tsx        # Process timeline (5 steps)
+│   ├── 📄 Packages.tsx          # Service packages (3 options)
+│   ├── 📄 Trust.tsx             # Trust & compliance cards
+│   ├── 📄 AircraftTypes.tsx     # Aircraft types grid
+│   ├── 📄 FAQ.tsx               # FAQ accordion
+│   ├── 📄 Contact.tsx           # Contact form + EmailJS
+│   ├── 📄 Footer.tsx            # Footer with links
+│   └── 📄 FloatingCTA.tsx       # Floating "Schedule" button
+│
+└── 📁 lib/                      # Utilities
+    └── 📄 content.ts            # ⭐ ALL CONTENT HERE!
+                                 # Edit this file to customize!
+
+═══════════════════════════════════════════════════════════════
+
+KEY FILES TO KNOW:
+
+🎯 lib/content.ts
+   - ALL website content in one place
+   - Contact email (line 8)
+   - Headlines, descriptions, packages
+   - FAQ questions and answers
+   - Aircraft types
+   - Easy to edit - no coding needed!
+
+🎨 tailwind.config.ts
+   - Brand colors
+   - Fonts
+   - Custom animations
+   - Design tokens
+
+📱 app/page.tsx
+   - Assembles all sections
+   - Simple imports
+   - Easy to reorder sections
+
+🧩 components/
+   - Each section is a separate component
+   - Self-contained and reusable
+   - Well-documented code
+
+═══════════════════════════════════════════════════════════════
+
+TO CUSTOMIZE:
+
+1. Content → lib/content.ts
+2. Colors → tailwind.config.ts
+3. Styles → app/globals.css
+4. Layout → app/page.tsx (section order)
+5. Components → components/ (advanced)
+
+═══════════════════════════════════════════════════════════════
+
+AFTER npm install, YOU'LL ALSO SEE:
+
+📁 node_modules/     # Dependencies (auto-generated)
+📁 .next/            # Build output (auto-generated)
+
+These folders are auto-generated and should not be edited.
+
+═══════════════════════════════════════════════════════════════
+
