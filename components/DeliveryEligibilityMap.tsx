@@ -187,7 +187,7 @@ export default function DeliveryEligibilityMap() {
       >
         <ZoomableGroup zoom={zoom} center={center}>
           <Geographies geography={geoUrl}>
-            {({ geographies }) => {
+            {({ geographies }: any) => {
               return geographies.map((geo: any) => {
                 const id = String(geo.id).padStart(3, '0');
                 const isLegal = Boolean(LEGAL[id]);
@@ -375,4 +375,5 @@ export default function DeliveryEligibilityMap() {
     </div>
   );
 }
+
 
