@@ -1,7 +1,8 @@
-&apos;use client&apos;;
+'use client';
 
-import { motion } from &apos;framer-motion&apos;;
-import { TRUST_POINTS } from &apos;@/lib/content&apos;;
+/* eslint-disable react/no-unescaped-entities */
+import { motion } from 'framer-motion';
+import { TRUST_POINTS } from '@/lib/content';
 
 export default function Trust() {
   return (
@@ -53,15 +54,15 @@ export default function Trust() {
           <div className="glass-panel-light p-8 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Questions About Our Process?</h3>
             <p className="text-gray-light mb-6">
-              We&apos;re happy to walk you through every detail of how we protect your transaction and ensure compliance.
+              We're happy to walk you through every detail of how we protect your transaction and ensure compliance.
             </p>
             <button
               onClick={() => {
-                const element = document.getElementById(&apos;contact&apos;);
+                const element = document.getElementById('contact');
                 if (element) {
                   const offset = 80;
                   const elementPosition = element.offsetTop - offset;
-                  window.scrollTo({ top: elementPosition, behavior: &apos;smooth&apos; });
+                  window.scrollTo({ top: elementPosition, behavior: 'smooth' });
                 }
               }}
               className="btn-primary"
@@ -85,7 +86,7 @@ function TrustCard({ point, index }: TrustCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: &apos;-50px&apos; }}
+      viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -4 }}
       className="group"

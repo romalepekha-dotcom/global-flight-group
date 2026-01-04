@@ -1,8 +1,9 @@
-&apos;use client&apos;;
+'use client';
 
-import { motion, AnimatePresence } from &apos;framer-motion&apos;;
-import { useState } from &apos;react&apos;;
-import { FAQ_ITEMS } from &apos;@/lib/content&apos;;
+/* eslint-disable react/no-unescaped-entities */
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { FAQ_ITEMS } from '@/lib/content';
 
 export default function FAQ() {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -33,7 +34,7 @@ export default function FAQ() {
           >
             FREQUENTLY ASKED QUESTIONS
           </motion.div>
-          <h2 className="heading-lg mb-6">Got Questions? We&apos;ve Got Answers</h2>
+          <h2 className="heading-lg mb-6">Got Questions? We've Got Answers</h2>
           <p className="text-xl text-gray-muted max-w-3xl mx-auto">
             Everything you need to know about our aircraft acquisition and export process.
           </p>
@@ -63,15 +64,15 @@ export default function FAQ() {
           <div className="glass-panel-light p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
             <p className="text-gray-light mb-6">
-              We&apos;re here to help. Schedule a call and we&apos;ll walk you through the entire process.
+              We're here to help. Schedule a call and we'll walk you through the entire process.
             </p>
             <button
               onClick={() => {
-                const element = document.getElementById(&apos;contact&apos;);
+                const element = document.getElementById('contact');
                 if (element) {
                   const offset = 80;
                   const elementPosition = element.offsetTop - offset;
-                  window.scrollTo({ top: elementPosition, behavior: &apos;smooth&apos; });
+                  window.scrollTo({ top: elementPosition, behavior: 'smooth' });
                 }
               }}
               className="btn-primary"
@@ -97,15 +98,15 @@ function FAQItem({ item, index, isOpen, onToggle }: FAQItemProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: &apos;-50px&apos; }}
+      viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
       className="group"
     >
       <div
         className={`glass-panel transition-all duration-300 ${
           isOpen
-            ? &apos;bg-white/10 border-accent-sky/30&apos;
-            : &apos;hover:bg-white/5 border-white/10&apos;
+            ? 'bg-white/10 border-accent-sky/30'
+            : 'hover:bg-white/5 border-white/10'
         }`}
       >
         {/* Question Button */}
@@ -141,9 +142,9 @@ function FAQItem({ item, index, isOpen, onToggle }: FAQItemProps) {
           {isOpen && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: &apos;auto&apos;, opacity: 1 }}
+              animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: &apos;easeInOut&apos; }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
               className="overflow-hidden"
             >
               <div className="px-6 pb-6 pt-0">
